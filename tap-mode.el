@@ -332,17 +332,16 @@
   '(
     ;; version
     ("^\\(TAP version +\\)\\([0-9]+\\) *$" 
-     1 'tap-version-face
-     2 'tap-version-number-face
+     (1 'tap-version-face)
+     (2 'tap-version-number-face)
      )
-    ;; plan
+    ;; ;; plan
     ("\\(^1\\.\\.\\)\\([0-9]+\\)\\(\s*#\s*SKIP\>\\)?\\(.*\\)?$"
-     1 'tap-plan-face
-     2 'tap-plan-tests-planned-face
-     3 'tap-plan-directive-face
-     4 'tap-plan-explanation-face
+     (1 'tap-plan-face)
+     (2 'tap-plan-tests-planned-face)
+     (3 'tap-plan-directive-face)
+     (4 'tap-plan-explanation-face)
      )
-    ;; conflicts family/core/die first
     )
   "Minimal highlighting expressions for TAP mode.")
 
