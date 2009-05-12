@@ -1,7 +1,7 @@
 ---
 name: tap-mode
 abstract: Emacs syntax highlighting for TAP (Test Anything Protocol)
-version: 0.502
+version: 0.01
 author:
   - Steffen Schwigon <ss5@renormalist.net>
 license: perl
