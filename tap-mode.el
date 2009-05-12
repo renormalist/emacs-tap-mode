@@ -12,10 +12,10 @@
 
 ;;; Commentary:
 
-;;; This mode is built with help of the
-;;; "Emacs language mode creation tutorial" at
-;;; http://renormalist.net/cgi-bin/twiki/view/Renormalist/EmacsLanguageModeCreationTutorial
-;;;
+;;; This mode is built with help of the "Emacs language mode creation
+;;; tutorial" written by Scott Andrew Borton, now hosted at
+;;; 
+;;;   http://renormalist.net/cgi-bin/twiki/view/Renormalist/EmacsLanguageModeCreationTutorial
 
 ;;; Usage:
 
