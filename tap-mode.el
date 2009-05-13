@@ -330,18 +330,6 @@
 ;; syntax highlighting: standard keywords
 (defconst tap-font-lock-keywords-1
   '(
-    ;; version
-    ("^\\(TAP version +\\)\\([0-9]+\\) *$" 
-     (1 'tap-version-face)
-     (2 'tap-version-number-face)
-     )
-    ;; ;; plan
-    ("\\(^1\\.\\.\\)\\([0-9]+\\)\\(\s*#\s*SKIP\>\\)?\\(.*\\)?$"
-     (1 'tap-plan-face)
-     (2 'tap-plan-tests-planned-face)
-     (3 'tap-plan-directive-face)
-     (4 'tap-plan-explanation-face)
-     )
     )
   "Minimal highlighting expressions for TAP mode.")
 
@@ -356,7 +344,58 @@
 (defconst tap-font-lock-keywords-3
   (append tap-font-lock-keywords-2
 	  '(
-	    ))
+            ;; version
+            ("^\\(TAP version +\\)\\([0-9]+\\)" 
+             (1 'tap-version-face)
+             (2 'tap-version-number-face)
+             )
+            ;; simple plan
+            ("^\\(1\\.\\.\\)\\([0-9]+\\)"
+             (1 'tap-plan-face)
+             (2 'tap-plan-tests-planned-face)
+             )
+            ;; extended plan
+            ("^\\(1\\.\\.\\)\\([0-9]+\\)\\( *# *\\(SKIP\\|skip\\)\\>\\)\\(.*\\)"
+             (1 'tap-plan-face)
+             (2 'tap-plan-tests-planned-face)
+             (4 'tap-plan-directive-face)
+             (5 'tap-plan-explanation-face)
+             )
+            ;; test
+            ;;    ("^\\(\\(not \\)?ok\\)\\( *[0-9]+\\)?\\( *[^#]*\\)\\(\\(# *\\(\\(affe\\|skip\\|TODO\\)\\>\\|\\([^ ]+\\)\\).*\\)\\( +\\(.*\\)\\)?\\)?$" 
+            ;;    ("^\\(\\(not \\)?ok\\)\\( *[0-9]+\\)?\\( +[^#]+\\)?\\(\\(# *\\(\\(affe\\|skip\\|TODO\\)\\>\\|\\([^ ]+\\)\\)\\(.*\\)\\)\\)?$" 
+            ;;    ("^\\(\\(not \\)?ok\\)\\(\\( *[0-9]+\\)?\\( *[^#]*\\)?\\)?$" 
+            ;; plain test
+            ("\\(^\\(not \\)?ok\\)"
+             (1 'tap-test-ok-face)
+             ;; (4 'tap-test-num-face)
+             ;; (5 'tap-test-description-face)
+             ;; (8 'tap-test-directive-face)
+             ;; (9 'tap-test-unknown-directive-face)
+             ;; (12 'tap-test-directive-explanation-face)
+             )
+            ;; test with num
+            ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\)"
+             (1 'tap-test-ok-face)
+             (3 'tap-test-num-face)
+             )
+
+            ;; test with num
+            ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\) *\\(- *\\)?\\(.*\\)"
+             (1 'tap-test-ok-face)
+             (3 'tap-test-num-face)
+             (5 'tap-test-description-face)
+             )
+
+            ;; test with num
+            ;; ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\) *\\# *\\(SKIP\\|skip\\)\\>"
+            ;;  (1 'tap-test-ok-face)
+            ;;  (3 'tap-test-num-face)
+            ;;  (5 'tap-test-directive-face)
+            ;;  (6 'tap-test-directive-explanation-face)
+            ;;  )
+
+            ))
   "Balls-out highlighting in TAP mode.")
 
 ;; default level of highlight to maximum
