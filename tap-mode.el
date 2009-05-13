@@ -158,7 +158,7 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-aaa-face
+      (defface tap-test-ok-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
@@ -171,7 +171,7 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-bbb-face
+      (defface tap-test-num-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
@@ -184,7 +184,7 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-ccc-face
+      (defface tap-test-description-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
@@ -197,20 +197,20 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-aaa-face
+      (defface tap-test-directive-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "red4"))
+             (:foreground "green"))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t :underline t))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-bbb-face
+      (defface tap-test-unknown-directive-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
@@ -223,7 +223,7 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-ccc-face
+      (defface tap-test-directive-explanation-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
