@@ -3,10 +3,10 @@ TAP version 13
 1..6 # skip plan skip explanation
 1..6 # SKIP plan skip explanation
 ok
-ok just explanation
-not ok just explanation
+OK just explanation
+NOT ok just explanation
 ok 1
-not ok 1
+not OK 1
 ok 2 with explanation
 not ok 2 with explanation
 ok 3 - with another explanation
