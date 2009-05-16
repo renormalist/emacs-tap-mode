@@ -366,34 +366,47 @@
             ;;    ("^\\(\\(not \\)?ok\\)\\( *[0-9]+\\)?\\( +[^#]+\\)?\\(\\(# *\\(\\(affe\\|skip\\|todo\\)\\>\\|\\([^ ]+\\)\\)\\(.*\\)\\)\\)?$" 
             ;;    ("^\\(\\(not \\)?ok\\)\\(\\( *[0-9]+\\)?\\( *[^#]*\\)?\\)?$" 
             ;; plain test
-            ("\\(^\\(not \\)?ok\\)"
-             (1 'tap-test-ok-face)
-             ;; (4 'tap-test-num-face)
-             ;; (5 'tap-test-description-face)
-             ;; (8 'tap-test-directive-face)
-             ;; (9 'tap-test-unknown-directive-face)
-             ;; (12 'tap-test-directive-explanation-face)
-             )
-            ;; test with num
-            ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\)"
-             (1 'tap-test-ok-face)
-             (3 'tap-test-num-face)
-             )
-
-            ;; test with num
-            ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\) *\\(- *\\)?\\(.*\\)"
-             (1 'tap-test-ok-face)
-             (3 'tap-test-num-face)
-             (5 'tap-test-description-face)
-             )
-
-            ;; test with num
-            ;; ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\) *\\# *\\(SKIP\\|skip\\)\\>"
+            ;; ("\\(^\\(not \\)?ok\\)"
+            ;;  (1 'tap-test-ok-face)
+            ;;  ;; (4 'tap-test-num-face)
+            ;;  ;; (5 'tap-test-description-face)
+            ;;  ;; (8 'tap-test-directive-face)
+            ;;  ;; (9 'tap-test-unknown-directive-face)
+            ;;  ;; (12 'tap-test-directive-explanation-face)
+            ;;  )
+            ;; ;; test with num
+            ;; ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\)"
             ;;  (1 'tap-test-ok-face)
             ;;  (3 'tap-test-num-face)
-            ;;  (5 'tap-test-directive-face)
-            ;;  (6 'tap-test-directive-explanation-face)
             ;;  )
+
+            ;; ;; test with num
+            ;; ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\) *\\(- *\\)?\\(.*\\)"
+            ;;  (1 'tap-test-ok-face)
+            ;;  (3 'tap-test-num-face)
+            ;;  (5 'tap-test-description-face)
+            ;;  )
+
+            ;; ;; test with num
+            ;; ;;  1   2                 3             4          5       6                  7
+            ;; ("^\\(\\(not \\)?ok\\) *\\([0-9]*\\) *\\([^#]*\\)\\( *# *\\(todo\\|skip\\) *\\(.*\\)*\\)?"
+            ;;  (1 'tap-test-ok-face nil t)
+            ;;  (3 'tap-test-num-face nil t)
+            ;;  (4 'tap-test-description-face nil t)
+            ;;  (6 'tap-test-directive-face nil t)
+            ;;  (7 'tap-test-directive-explanation-face nil t)
+            ;;  )
+
+
+            ("^\\(not \\)?ok\\>"
+             (0 'tap-test-ok-face)
+             (" *\\([0-9]+\\)" nil nil (1 'tap-test-num-face))
+             (" *\\([^#]+\\) *# +\\(todo\\|skip\\)\\> +\\(.*\\)" 
+              nil
+              nil
+              (1 'tap-test-description-face)
+              (2 'tap-test-directive-face)
+              (3 'tap-test-directive-explanation-face)))
 
             ))
   "Balls-out highlighting in TAP mode.")
