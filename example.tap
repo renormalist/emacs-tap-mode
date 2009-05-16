@@ -7,7 +7,7 @@ OK just explanation
 NOT ok just explanation
 ok 1
 not OK 1
-ok 2 with explanation
+ok 2 with "some" explanation
 not ok 2 with explanation
 ok 3 - with another explanation
 not ok 3 - with another explanation
