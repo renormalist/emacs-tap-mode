@@ -145,7 +145,7 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-plan-explanation-face
+      (defface tap-plan-directive-explanation-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
@@ -359,7 +359,7 @@
              (1 'tap-plan-face)
              (2 'tap-plan-tests-planned-face)
              (4 'tap-plan-directive-face)
-             (5 'tap-plan-explanation-face)
+             (5 'tap-plan-directive-explanation-face)
              )
             ;; test
             ;;    ("^\\(\\(not \\)?ok\\)\\( *[0-9]+\\)?\\( *[^#]*\\)\\(\\(# *\\(\\(affe\\|skip\\|TODO\\)\\>\\|\\([^ ]+\\)\\).*\\)\\( +\\(.*\\)\\)?\\)?$" 
