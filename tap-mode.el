@@ -433,7 +433,12 @@
   (tap-create-syntax-table)
   (use-local-map tap-mode-map)
   (make-local-variable 'font-lock-defaults)
-  (setq font-lock-defaults '(tap-font-lock-keywords 't 't))
+  (setq font-lock-defaults '((tap-font-lock-keywords-1
+                              tap-font-lock-keywords-2
+                              tap-font-lock-keywords-3)
+                             't ;; KEYWORDS-ONLY
+                             't ;; CASE-FOLD
+                             ))
   (setq major-mode 'tap-mode)
   (setq mode-name "TAP")
   (setq imenu-generic-expression '((nil "^not ok \\(.*\\)" 1)))
