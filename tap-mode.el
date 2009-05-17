@@ -384,6 +384,10 @@
               (1 'tap-test-description-face)
               (2 'tap-test-directive-face)
               (3 'tap-test-directive-explanation-face)))
+            ;; directives
+            ("^\\(pragma\\) +\\(.+\\)"
+             (1 'tap-pragma-keyword-face)
+             (2 'tap-pragma-face))
 
             ))
   "Balls-out highlighting in TAP mode.")
