@@ -177,10 +177,10 @@
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "orange3" :underline t))
+             (:foreground "blue" :underline nil))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
-            (t (:bold t :underline t))))
+            (t (:bold nil :underline nil))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
@@ -236,16 +236,29 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-aaa-face
+      (defface tap-pragma-keyword-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "red4"))
+             (:foreground "orange1"))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-pragma-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "orange2"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold nil :underline nil))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
