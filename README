@@ -1,7 +1,10 @@
 tap-mode.el - A major mode for editing .tap-files in (X)Emacs
 
-TAP is the Plain Old Documentation format of Perl.
-This mode mainly defines a grammar for syntax highlighting.
+TAP is the Test Anything Protocol, a communication protocol
+between unit tests and a test harness.
+
+This mode mainly defines a grammar for syntax highlighting 
+of TAP files.
 
 -------------------------------------------------------------
 

@@ -145,7 +145,7 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-plan-explanation-face
+      (defface tap-plan-directive-explanation-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
@@ -177,10 +177,10 @@
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "orange3" :underline t))
+             (:foreground "blue" :underline nil))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
-            (t (:bold t :underline t))))
+            (t (:bold nil :underline nil))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
@@ -236,16 +236,29 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-aaa-face
+      (defface tap-pragma-keyword-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "red4"))
+             (:foreground "orange1"))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-pragma-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "orange2"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold nil :underline nil))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
@@ -355,45 +368,26 @@
              (2 'tap-plan-tests-planned-face)
              )
             ;; extended plan
-            ("^\\(1\\.\\.\\)\\([0-9]+\\)\\( *# *\\(SKIP\\|skip\\)\\>\\)\\(.*\\)"
+            ("^\\(1\\.\\.\\)\\([0-9]+\\)\\( *# *\\(todo\\|skip\\)\\>\\)\\(.*\\)"
              (1 'tap-plan-face)
              (2 'tap-plan-tests-planned-face)
              (4 'tap-plan-directive-face)
-             (5 'tap-plan-explanation-face)
+             (5 'tap-plan-directive-explanation-face)
              )
-            ;; test
-            ;;    ("^\\(\\(not \\)?ok\\)\\( *[0-9]+\\)?\\( *[^#]*\\)\\(\\(# *\\(\\(affe\\|skip\\|TODO\\)\\>\\|\\([^ ]+\\)\\).*\\)\\( +\\(.*\\)\\)?\\)?$" 
-            ;;    ("^\\(\\(not \\)?ok\\)\\( *[0-9]+\\)?\\( +[^#]+\\)?\\(\\(# *\\(\\(affe\\|skip\\|TODO\\)\\>\\|\\([^ ]+\\)\\)\\(.*\\)\\)\\)?$" 
-            ;;    ("^\\(\\(not \\)?ok\\)\\(\\( *[0-9]+\\)?\\( *[^#]*\\)?\\)?$" 
-            ;; plain test
-            ("\\(^\\(not \\)?ok\\)"
-             (1 'tap-test-ok-face)
-             ;; (4 'tap-test-num-face)
-             ;; (5 'tap-test-description-face)
-             ;; (8 'tap-test-directive-face)
-             ;; (9 'tap-test-unknown-directive-face)
-             ;; (12 'tap-test-directive-explanation-face)
-             )
-            ;; test with num
-            ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\)"
-             (1 'tap-test-ok-face)
-             (3 'tap-test-num-face)
-             )
-
-            ;; test with num
-            ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\) *\\(- *\\)?\\(.*\\)"
-             (1 'tap-test-ok-face)
-             (3 'tap-test-num-face)
-             (5 'tap-test-description-face)
-             )
-
-            ;; test with num
-            ;; ("\\(^\\(not \\)?ok\\) *\\([0-9]*\\) *\\# *\\(SKIP\\|skip\\)\\>"
-            ;;  (1 'tap-test-ok-face)
-            ;;  (3 'tap-test-num-face)
-            ;;  (5 'tap-test-directive-face)
-            ;;  (6 'tap-test-directive-explanation-face)
-            ;;  )
+            ;; test lines
+            ("^\\(not \\)?ok\\>"
+             (0 'tap-test-ok-face)
+             (" *\\([0-9]+\\)" nil nil (1 'tap-test-num-face))
+             (" *\\([^#]+\\) *# +\\(todo\\|skip\\)\\> +\\(.*\\)" 
+              nil
+              nil
+              (1 'tap-test-description-face)
+              (2 'tap-test-directive-face)
+              (3 'tap-test-directive-explanation-face)))
+            ;; directives
+            ("^\\(pragma\\) +\\(.+\\)"
+             (1 'tap-pragma-keyword-face)
+             (2 'tap-pragma-face))
 
             ))
   "Balls-out highlighting in TAP mode.")
@@ -420,7 +414,12 @@
   (tap-create-syntax-table)
   (use-local-map tap-mode-map)
   (make-local-variable 'font-lock-defaults)
-  (setq font-lock-defaults '(tap-font-lock-keywords 't))
+  (setq font-lock-defaults '((tap-font-lock-keywords-1
+                              tap-font-lock-keywords-2
+                              tap-font-lock-keywords-3)
+                             't ;; KEYWORDS-ONLY
+                             't ;; CASE-FOLD
+                             ))
   (setq major-mode 'tap-mode)
   (setq mode-name "TAP")
   (setq imenu-generic-expression '((nil "^not ok \\(.*\\)" 1)))
