@@ -17,15 +17,15 @@ not ok 3 - with another explanation
      - name: 'Hash two'
        value: 2
    ...
+not ok 4 - explanation # todo
 pragma +strict
-not ok 4 # todo
-not ok 5 # TODO
-not ok 6 # todo spec only
-not ok 7 # TODO spec only
-ok 8 # todo
-ok 9 # TODO
-ok 10 # todo spec only
-ok 11 # TODO spec only
+not ok 5 explanation # TODO
+not ok 6 explanation # todo spec only
+not ok 7 - explanation # TODO spec only
+ok 8 explanation # todo
+ok 9 - explanation # TODO
+ok 10 explanation # todo spec only
+ok 11 - explanation # TODO spec only
 #   Failed (TODO) test at t/data_dpath.t line 144.
 #     Structures begin differing at:
 #          $got->[0] = Does not exist
