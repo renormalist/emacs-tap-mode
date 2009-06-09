@@ -387,21 +387,29 @@
              (4 'tap-plan-directive-face)
              (5 'tap-plan-directive-explanation-face)
              )
-            ;; test lines
-            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\)"
+            ;; test lines with only directives
+            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *# *\\(todo\\|skip\\)\\> *\\(.*\\)"
              (1 'tap-test-ok-face)
              (3 'tap-test-num-face)
-             ;;(" *\\([^#]*\\)" nil nil (1 'tap-test-description-face))
-             (" *\\([^#]+\\) *# *\\(todo\\|skip\\)?\\> *\\(.*\\)" 
-              nil
-              nil
-              (1 'tap-test-description-face)
-              (2 'tap-test-directive-face)
-              (3 'tap-test-directive-explanation-face)))
-            ;; directives
+             (4 'tap-test-directive-face)
+             (5 'tap-test-directive-explanation-face))
+            ;; test lines with description and directive
+            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([-a-z 0-9]+\\) +# *\\(todo\\|skip\\)\\> *\\(.*\\)"
+             (1 'tap-test-ok-face)
+             (3 'tap-test-num-face)
+             (4 'tap-test-description-face)
+             (5 'tap-test-directive-face)
+             (6 'tap-test-directive-explanation-face))
+            ;; test lines with only description
+            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([-a-z 0-9]*\\)"
+             (1 'tap-test-ok-face)
+             (3 'tap-test-num-face)
+             (4 'tap-test-description-face))
+            ;; pragmas
             ("^\\(pragma\\) +\\(.+\\)"
              (1 'tap-pragma-keyword-face)
              (2 'tap-pragma-face))
+            ;; comments
             ("^\\(#.*\\)$"
              (1 'tap-comment-face))
 
