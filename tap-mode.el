@@ -262,6 +262,19 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
+      (defface tap-comment-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "steelblue3"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold nil :underline nil))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
       (defface tap-bbb-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
@@ -388,6 +401,8 @@
             ("^\\(pragma\\) +\\(.+\\)"
              (1 'tap-pragma-keyword-face)
              (2 'tap-pragma-face))
+            ("^\\(#.*\\)$"
+             (1 'tap-comment-face))
 
             ))
   "Balls-out highlighting in TAP mode.")
