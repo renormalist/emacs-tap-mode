@@ -9,6 +9,7 @@ ok 1
 not OK 1
 ok 2 with "some" explanation
 not ok 2 with explanation
+not ok 2 some numbers 01 affe 02 zomtec
 ok 3 - with another explanation
 not ok 3 - with another explanation
    ---

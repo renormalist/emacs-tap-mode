@@ -229,7 +229,7 @@
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "orange4" :underline t :weight bold))
+             (:foreground "orange3" :underline t :weight bold))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t :underline t))))
@@ -388,10 +388,11 @@
              (5 'tap-plan-directive-explanation-face)
              )
             ;; test lines
-            ("^\\(not \\)?ok\\>"
-             (0 'tap-test-ok-face)
-             (" *\\([0-9]+\\)" nil nil (1 'tap-test-num-face))
-             (" *\\([^#]+\\) *# +\\(todo\\|skip\\)?\\> *\\(.*\\)" 
+            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\)"
+             (1 'tap-test-ok-face)
+             (3 'tap-test-num-face)
+             ;;(" *\\([^#]*\\)" nil nil (1 'tap-test-description-face))
+             (" *\\([^#]+\\) *# *\\(todo\\|skip\\)?\\> *\\(.*\\)" 
               nil
               nil
               (1 'tap-test-description-face)
