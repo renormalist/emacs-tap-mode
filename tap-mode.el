@@ -391,7 +391,7 @@
             ("^\\(not \\)?ok\\>"
              (0 'tap-test-ok-face)
              (" *\\([0-9]+\\)" nil nil (1 'tap-test-num-face))
-             (" *\\([^#]+\\) *# +\\(todo\\|skip\\)\\> +\\(.*\\)" 
+             (" *\\([^#]+\\) *# +\\(todo\\|skip\\)?\\> *\\(.*\\)" 
               nil
               nil
               (1 'tap-test-description-face)
