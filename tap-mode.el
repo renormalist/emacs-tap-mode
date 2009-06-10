@@ -394,14 +394,14 @@
              (4 'tap-test-directive-face)
              (5 'tap-test-directive-explanation-face))
             ;; test lines with description and directive
-            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([-a-z 0-9]+\\) +# *\\(todo\\|skip\\)\\> *\\(.*\\)"
+            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]+\\) +# *\\(todo\\|skip\\)\\> *\\(.*\\)"
              (1 'tap-test-ok-face)
              (3 'tap-test-num-face)
              (4 'tap-test-description-face)
              (5 'tap-test-directive-face)
              (6 'tap-test-directive-explanation-face))
             ;; test lines with only description
-            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([-a-z 0-9]*\\)"
+            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]*\\)"
              (1 'tap-test-ok-face)
              (3 'tap-test-num-face)
              (4 'tap-test-description-face))
