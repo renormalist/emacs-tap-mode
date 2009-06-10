@@ -502,6 +502,7 @@
 (defconst tap-font-lock-keywords-3
   (append tap-font-lock-keywords-2
 	  '(
+            ;; ----- non-nested TAP -----
             ;; version
             ("^\\(TAP version +\\)\\([0-9]+\\)" 
              (1 'tap-version-face)
@@ -524,26 +525,80 @@
              (1 'tap-test-ok-face)
              (3 'tap-test-num-face)
              (4 'tap-test-directive-face)
-             (5 'tap-test-directive-explanation-face))
+             (5 'tap-test-directive-explanation-face)
+             )
             ;; test lines with description and directive
             ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]+\\) +# *\\(todo\\|skip\\)\\> *\\(.*\\)"
              (1 'tap-test-ok-face)
              (3 'tap-test-num-face)
              (4 'tap-test-description-face)
              (5 'tap-test-directive-face)
-             (6 'tap-test-directive-explanation-face))
+             (6 'tap-test-directive-explanation-face)
+             )
             ;; test lines with only description
             ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]*\\)"
              (1 'tap-test-ok-face)
              (3 'tap-test-num-face)
-             (4 'tap-test-description-face))
+             (4 'tap-test-description-face)
+             )
             ;; pragmas
             ("^\\(pragma\\) +\\(.+\\)"
              (1 'tap-pragma-keyword-face)
-             (2 'tap-pragma-face))
+             (2 'tap-pragma-face)
+             )
             ;; comments
             ("^\\(#.*\\)$"
-             (1 'tap-comment-face))
+             (1 'tap-comment-face)
+             )
+
+            ;; ----- nested TAP -----
+            ;; version
+            ("^ +\\(TAP version +\\)\\([0-9]+\\)" 
+             (1 'tap-version-face)
+             (2 'tap-version-number-face)
+             )
+            ;; simple plan
+            ("^ +\\(1\\.\\.\\)\\([0-9]+\\)"
+             (1 'tap-plan-face)
+             (2 'tap-plan-tests-planned-face)
+             )
+            ;; extended plan
+            ("^ +\\(1\\.\\.\\)\\([0-9]+\\)\\( *# *\\(todo\\|skip\\)\\>\\)\\(.*\\)"
+             (1 'tap-plan-face)
+             (2 'tap-plan-tests-planned-face)
+             (4 'tap-plan-directive-face)
+             (5 'tap-plan-directive-explanation-face)
+             )
+            ;; test lines with only directives
+            ("^ +\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *# *\\(todo\\|skip\\)\\> *\\(.*\\)"
+             (1 'tap-test-ok-face)
+             (3 'tap-test-num-face)
+             (4 'tap-test-directive-face)
+             (5 'tap-test-directive-explanation-face)
+             )
+            ;; test lines with description and directive
+            ("^ +\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]+\\) +# *\\(todo\\|skip\\)\\> *\\(.*\\)"
+             (1 'tap-test-ok-face)
+             (3 'tap-test-num-face)
+             (4 'tap-test-description-face)
+             (5 'tap-test-directive-face)
+             (6 'tap-test-directive-explanation-face)
+             )
+            ;; test lines with only description
+            ("^ +\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]*\\)"
+             (1 'tap-test-ok-face)
+             (3 'tap-test-num-face)
+             (4 'tap-test-description-face)
+             )
+            ;; pragmas
+            ("^ +\\(pragma\\) +\\(.+\\)"
+             (1 'tap-pragma-keyword-face)
+             (2 'tap-pragma-face)
+             )
+            ;; comments
+            ("^ +\\(#.*\\)$"
+             (1 'tap-comment-face)
+             )
 
             ))
   "Balls-out highlighting in TAP mode.")
