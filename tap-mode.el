@@ -80,6 +80,8 @@
       (defvar tap-dark-foreground
         (tap-choose-color "orchid1" "orange"))
 
+      ;; --------------------- TAP faces ----------------------
+
       (defface tap-version-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
@@ -275,73 +277,203 @@
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-bbb-face
+      ;; --------------------- nested TAP faces ----------------------
+
+      (defface tap-nested-version-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "orange3" :underline t))
+             (:foreground "blue3" :slant italic))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t :underline t))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-ccc-face
+      (defface tap-nested-version-number-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "orange4" :underline t :weight bold))
+             (:foreground "steelblue3" :underline t))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t :underline t))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-aaa-face
+      (defface tap-nested-plan-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "red4"))
+             (:foreground "red3" :weight bold))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t :underline t))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-bbb-face
+      (defface tap-nested-plan-tests-planned-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "orange3" :underline t))
+             (:foreground "green3" :weight bold))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t :underline t))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
 
-      (defface tap-ccc-face
+      (defface tap-nested-plan-directive-face
         (` ((((class grayscale) (background light))
              (:background "Gray90" :italic t :underline t))
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :underline t :bold t))
             (((class color) (background light))
-             (:foreground "orange4" :underline t :weight bold))
+             (:foreground "lightsteelblue2"))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-plan-directive-explanation-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "purple2"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-test-ok-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "red3"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-test-num-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "blue2" :underline nil))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold nil :underline nil))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-test-description-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "orange3" :underline t :weight bold))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-test-directive-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "green2"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-test-unknown-directive-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "orange2" :underline t))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-test-directive-explanation-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "orange2" :underline t :weight bold))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-pragma-keyword-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "orange"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold t :underline t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-pragma-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "orange1"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold nil :underline nil))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-comment-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t :underline t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :underline t :bold t))
+            (((class color) (background light))
+             (:foreground "steelblue2"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold nil :underline nil))))
         "Font Lock mode face used to highlight array names."
         :group 'tap-faces)
       ))
-
-;; ---------- end of stealing from cperl-mode ----------  
 
 ;; default variables
 (defvar tap-mode-hook nil)
