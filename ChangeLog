@@ -1,10 +1,15 @@
+2009-06-12  Steffen Schwigon  <ss5@renormalist.net>
+
+	* 0.02
+
+	* Release for CPAN
+
+	* quite full TAP syntax coverage (including some TAP nesting)
+
 2009-05-12  Steffen Schwigon  <ss5@renormalist.net>
 
 	* 0.01
 
 	* Initial version
 
-	* highlighting for some TAP syntax, mode-specific faces, the ususal drill
-
-
-
+	* Highlighting for some TAP syntax, mode-specific faces, the ususal drill

@@ -1,12 +1,17 @@
 ;;; tap-mode.el --- Major mode for editing .tap-files
 
-;;; It mainly defines a grammar for syntax highlighting of text files
-;;; containing TAP, the Test Anything Protocol.
+;;; TAP is the Test Anything Protocol, a communication protocol
+;;; between unit tests and a test harness.
+
+;;; This mode mainly defines a grammar for syntax highlighting of TAP
+;;; files.
 
 ;;; Copyright 2009 Steffen Schwigon
 
 ;;; Author: Steffen Schwigon <ss5@renormalist.net>
-;;; Version: 0.01
+;;; Version: 0.02
+;;; Keywords: testing tap
+;;; X-URL: http://search.cpan.org/~schwigon/emacs-tap-mode/
 
 ;;; Tested on i386-linux with GNU Emacs 23.0.91.1.
 

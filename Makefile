@@ -1,5 +1,6 @@
 VERSION = `grep '^;;; Version:' tap-mode.el | cut -d: -f2 | sed 's/ //g'`
-DISTNAME = tap-mode-$(VERSION)
+BASENAME = emacs-tap-mode
+DISTNAME = $(BASENAME)-$(VERSION)
 
 all:
 	@echo Nothing to do. Try make dist.
@@ -13,4 +14,4 @@ dist:
 	@/bin/rm -fr $(DISTNAME)
 
 clean:
-	/bin/rm -f tap-mode-?.*.tgz
+	/bin/rm -f $(BASENAME)-[0-9].[0-9]*.tgz
