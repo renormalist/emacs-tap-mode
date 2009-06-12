@@ -38,7 +38,7 @@
 
 ;;; Code:
 
-;; ---------- stealing from cperl-mode ----------  
+;; ---------- stolen from cperl-mode ----------  
 (defconst tap-xemacs-p (string-match "XEmacs\\|Lucid" emacs-version))
 
 (defun tap-choose-color (&rest list)
@@ -242,7 +242,7 @@
             (((class grayscale) (background dark))
              (:foreground "Gray80" :italic t :bold t))
             (((class color) (background light))
-             (:foreground "red4" :bold t))
+             (:foreground "red4"))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t))))
@@ -256,6 +256,32 @@
              (:foreground "Gray80" :italic t :bold t))
             (((class color) (background light))
              (:foreground "red4" :background "Gray91"))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-test-notok-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :bold t))
+            (((class color) (background light))
+             (:foreground "red4" :bold t))
+            (((class color) (background dark))
+             (:foreground (, tap-dark-foreground)))
+            (t (:bold t))))
+        "Font Lock mode face used to highlight array names."
+        :group 'tap-faces)
+
+      (defface tap-nested-test-notok-face
+        (` ((((class grayscale) (background light))
+             (:background "Gray90" :italic t))
+            (((class grayscale) (background dark))
+             (:foreground "Gray80" :italic t :bold t))
+            (((class color) (background light))
+             (:foreground "red4" :bold t :background "Gray91"))
             (((class color) (background dark))
              (:foreground (, tap-dark-foreground)))
             (t (:bold t))))
@@ -518,25 +544,28 @@
              (5 'tap-plan-directive-explanation-face)
              )
             ;; test lines with only directives
-            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *# *\\(todo\\|skip\\)\\> *\\(.*\\)"
-             (1 'tap-test-ok-face)
-             (3 'tap-test-num-face)
-             (4 'tap-test-directive-face)
-             (5 'tap-test-directive-explanation-face)
-             )
-            ;; test lines with description and directive
-            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]+\\) +# *\\(todo\\|skip\\)\\> *\\(.*\\)"
-             (1 'tap-test-ok-face)
-             (3 'tap-test-num-face)
-             (4 'tap-test-description-face)
+            ("^\\(\\(not \\)?\\(ok\\)\\)\\> *\\([0-9]*\\) *# *\\(todo\\|skip\\)\\> *\\(.*\\)"
+             (1 'tap-test-notok-face)
+             (3 'tap-test-ok-face)
+             (4 'tap-test-num-face)
              (5 'tap-test-directive-face)
              (6 'tap-test-directive-explanation-face)
              )
+            ;; test lines with description and directive
+            ("^\\(\\(not \\)?\\(ok\\)\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]+\\) +# *\\(todo\\|skip\\)\\> *\\(.*\\)"
+             (1 'tap-test-notok-face)
+             (3 'tap-test-ok-face)
+             (4 'tap-test-num-face)
+             (5 'tap-test-description-face)
+             (6 'tap-test-directive-face)
+             (7 'tap-test-directive-explanation-face)
+             )
             ;; test lines with only description
-            ("^\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]*\\)"
-             (1 'tap-test-ok-face)
-             (3 'tap-test-num-face)
-             (4 'tap-test-description-face)
+            ("^\\(\\(not \\)?\\(ok\\)\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]*\\)"
+             (1 'tap-test-notok-face)
+             (3 'tap-test-ok-face)
+             (4 'tap-test-num-face)
+             (5 'tap-test-description-face)
              )
             ;; pragmas
             ("^\\(pragma\\) +\\(.+\\)"
@@ -567,25 +596,28 @@
              (5 'tap-nested-plan-directive-explanation-face)
              )
             ;; test lines with only directives
-            ("^ +\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *# *\\(todo\\|skip\\)\\> *\\(.*\\)"
-             (1 'tap-nested-test-ok-face)
-             (3 'tap-nested-test-num-face)
-             (4 'tap-nested-test-directive-face)
-             (5 'tap-nested-test-directive-explanation-face)
-             )
-            ;; test lines with description and directive
-            ("^ +\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]+\\) +# *\\(todo\\|skip\\)\\> *\\(.*\\)"
-             (1 'tap-nested-test-ok-face)
-             (3 'tap-nested-test-num-face)
-             (4 'tap-nested-test-description-face)
+            ("^ +\\(\\(not \\)?\\(ok\\)\\)\\> *\\([0-9]*\\) *# *\\(todo\\|skip\\)\\> *\\(.*\\)"
+             (1 'tap-nested-test-notok-face)
+             (3 'tap-nested-test-ok-face)
+             (4 'tap-nested-test-num-face)
              (5 'tap-nested-test-directive-face)
              (6 'tap-nested-test-directive-explanation-face)
              )
+            ;; test lines with description and directive
+            ("^ +\\(\\(not \\)?\\(ok\\)\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]+\\) +# *\\(todo\\|skip\\)\\> *\\(.*\\)"
+             (1 'tap-nested-test-notok-face)
+             (3 'tap-nested-test-ok-face)
+             (4 'tap-nested-test-num-face)
+             (5 'tap-nested-test-description-face)
+             (6 'tap-nested-test-directive-face)
+             (7 'tap-nested-test-directive-explanation-face)
+             )
             ;; test lines with only description
-            ("^ +\\(\\(not \\)?ok\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]*\\)"
-             (1 'tap-nested-test-ok-face)
-             (3 'tap-nested-test-num-face)
-             (4 'tap-nested-test-description-face)
+            ("^ +\\(\\(not \\)?\\(ok\\)\\)\\> *\\([0-9]*\\) *\\([^#[:cntrl:]]*\\)"
+             (1 'tap-nested-test-notok-face)
+             (3 'tap-nested-test-ok-face)
+             (4 'tap-nested-test-num-face)
+             (5 'tap-nested-test-description-face)
              )
             ;; pragmas
             ("^ +\\(pragma\\) +\\(.+\\)"
