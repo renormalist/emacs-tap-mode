@@ -1,5 +1,13 @@
 2009-06-12  Steffen Schwigon  <ss5@renormalist.net>
 
+	* 0.03
+
+	* fix old-style backquotes
+
+	* add example.tap to distribution
+
+2009-06-12  Steffen Schwigon  <ss5@renormalist.net>
+
 	* 0.02
 
 	* Release for CPAN
