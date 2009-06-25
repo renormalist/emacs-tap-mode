@@ -9,7 +9,7 @@ dist:
 	@mkdir -p $(DISTNAME)
 	@V=$(VERSION) ; echo VERSION: $$V
 	@V=$(VERSION) perl -pni -e 's/^(    |)version: \d+\.\d+/$$1version: $$ENV{V}/' META.yml
-	@cp tap-mode.el README ChangeLog META.yml $(DISTNAME)/
+	@cp tap-mode.el README ChangeLog META.yml example.tap $(DISTNAME)/
 	@tar czf $(DISTNAME).tgz $(DISTNAME)
 	@/bin/rm -fr $(DISTNAME)
 
