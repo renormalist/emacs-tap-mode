@@ -95,7 +95,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Version."
           :group 'tap-faces)
 
       (defface tap-nested-version-face
@@ -108,7 +108,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Version."
           :group 'tap-faces)
 
       (defface tap-version-number-face
@@ -121,7 +121,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Version Number."
           :group 'tap-faces)
 
       (defface tap-nested-version-number-face
@@ -134,7 +134,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Version Number."
           :group 'tap-faces)
 
       (defface tap-plan-face
@@ -147,7 +147,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Plan."
           :group 'tap-faces)
 
       (defface tap-nested-plan-face
@@ -160,7 +160,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Plan."
           :group 'tap-faces)
 
       (defface tap-plan-tests-planned-face
@@ -173,7 +173,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Count Of Planned Tests."
           :group 'tap-faces)
 
       (defface tap-nested-plan-tests-planned-face
@@ -186,7 +186,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Count Of Planned Tests."
           :group 'tap-faces)
 
       (defface tap-plan-directive-face
@@ -199,7 +199,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Directives."
           :group 'tap-faces)
 
       (defface tap-nested-plan-directive-face
@@ -212,7 +212,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Directives."
           :group 'tap-faces)
 
       (defface tap-plan-directive-explanation-face
@@ -225,7 +225,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Directive Explanations."
           :group 'tap-faces)
 
       (defface tap-nested-plan-directive-explanation-face
@@ -238,7 +238,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Directive Explanations."
           :group 'tap-faces)
 
       (defface tap-test-ok-face
@@ -251,7 +251,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight OK Keywords."
           :group 'tap-faces)
 
       (defface tap-nested-test-ok-face
@@ -264,7 +264,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested OK Keywords."
           :group 'tap-faces)
 
       (defface tap-test-notok-face
@@ -277,7 +277,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight NOT OK Keywords."
           :group 'tap-faces)
 
       (defface tap-nested-test-notok-face
@@ -290,7 +290,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested NO OK Keywords."
           :group 'tap-faces)
 
       (defface tap-test-num-face
@@ -303,7 +303,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold nil)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Test Numbers."
           :group 'tap-faces)
 
       (defface tap-nested-test-num-face
@@ -316,7 +316,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold nil)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Test Numbers."
           :group 'tap-faces)
 
       (defface tap-test-description-face
@@ -329,7 +329,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Test Descriptions."
           :group 'tap-faces)
 
       (defface tap-nested-test-description-face
@@ -342,7 +342,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Test Descriptions."
           :group 'tap-faces)
 
       (defface tap-test-directive-face
@@ -355,7 +355,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Test Directives."
           :group 'tap-faces)
 
       (defface tap-nested-test-directive-face
@@ -368,7 +368,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Test Directives."
           :group 'tap-faces)
 
       (defface tap-test-unknown-directive-face
@@ -381,7 +381,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Unknown Test Directives."
           :group 'tap-faces)
 
       (defface tap-nested-test-unknown-directive-face
@@ -394,7 +394,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Unknown Test Directives."
           :group 'tap-faces)
 
       (defface tap-test-directive-explanation-face
@@ -407,7 +407,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Test Directive Explanations."
           :group 'tap-faces)
 
       (defface tap-nested-test-directive-explanation-face
@@ -420,7 +420,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Test Directive Explanations."
           :group 'tap-faces)
 
       (defface tap-pragma-keyword-face
@@ -433,7 +433,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Pragma Keyword."
           :group 'tap-faces)
 
       (defface tap-nested-pragma-keyword-face
@@ -446,7 +446,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold t)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Pragma Keyword."
           :group 'tap-faces)
 
       (defface tap-pragma-face
@@ -459,7 +459,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold nil)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Pragma Name."
           :group 'tap-faces)
 
       (defface tap-nested-pragma-face
@@ -472,7 +472,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold nil)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Pragma Name."
           :group 'tap-faces)
 
       (defface tap-comment-face
@@ -485,7 +485,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold nil)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight Comments."
           :group 'tap-faces)
 
       (defface tap-nested-comment-face
@@ -498,7 +498,7 @@
            (((class color) (background dark))
             (:foreground (, tap-dark-foreground)))
            (t (:bold nil)))
-          "Font Lock mode face used to highlight array names."
+          "Font Lock mode face used to highlight nested Comments."
           :group 'tap-faces)
 
       ))
