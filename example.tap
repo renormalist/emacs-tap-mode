@@ -13,10 +13,10 @@ not ok 2 some numbers 01 affe 02 zomtec
 ok 3 - with another explanation
 not ok 3 - with another explanation
    ---
-     - name: 'Hash one'
-       value: 1
-     - name: 'Hash two'
-       value: 2
+   - name: 'Hash one'
+     value: 1
+   - name: 'Hash two'
+     value: 2
    ...
 not ok 4 - explanation # todo
 pragma +strict
@@ -61,10 +61,10 @@ ok 19 # TODO think twice
    ok 2 with "some" explanation
    ok 3 - with another explanation
       ---
-        - name: 'Hash one'
-          value: 1
-        - name: 'Hash two'
-          value: 2
+      - name: 'Hash one'
+        value: 1
+      - name: 'Hash two'
+        value: 2
       ...
    not ok 4 - explanation # todo
    pragma +strict
