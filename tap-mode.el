@@ -501,6 +501,32 @@
           "Font Lock mode face used to highlight nested TAP Comments."
           :group 'tap-faces)
 
+      (defface tap-yaml-diagnostics-key-face
+        ` ((((class grayscale) (background light))
+            (:background "Gray90" :italic t))
+           (((class grayscale) (background dark))
+            (:foreground "Gray80" :italic t :bold t))
+           (((class color) (background light))
+            (:foreground "magenta3" :underline t))
+           (((class color) (background dark))
+            (:foreground (, tap-dark-foreground)))
+           (t (:bold nil)))
+          "Font Lock mode face used to highlight nested TAP YAML Diagnostics Keys."
+          :group 'tap-faces)
+
+      (defface tap-yaml-diagnostics-value-face
+        ` ((((class grayscale) (background light))
+            (:background "Gray90" :italic t))
+           (((class grayscale) (background dark))
+            (:foreground "Gray80" :italic t :bold t))
+           (((class color) (background light))
+            (:foreground "magenta3" :bold t))
+           (((class color) (background dark))
+            (:foreground (, tap-dark-foreground)))
+           (t (:bold nil)))
+          "Font Lock mode face used to highlight nested TAP YAML Diagnostics Values."
+          :group 'tap-faces)
+
       ))
 
 ;; default variables
@@ -634,6 +660,13 @@
              (1 'tap-nested-comment-face)
              )
 
+            ;; ----- YAML diagnostics -----
+            ;; key/value pairs
+            ("^ +\\(- *\\)?\\([[:alnum:]]+\\): *\\(.+\\)" 
+             (2 'tap-yaml-diagnostics-key-face)
+             (3 'tap-yaml-diagnostics-value-face)
+             )
+
             ))
   "Balls-out highlighting in TAP mode.")
 
@@ -653,7 +686,7 @@
 
 ;; main
 (defun tap-mode ()
-  "Major mode for editing TAP files (Plain Old Documentation for Perl)."
+  "Major mode for editing TAP files (Test Anything Protocol)."
   (interactive)
   (kill-all-local-variables)
   (tap-create-syntax-table)
