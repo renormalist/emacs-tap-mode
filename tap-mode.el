@@ -93,7 +93,7 @@
            (((class color) (background light))
             (:foreground "green4"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Version."
           :group 'tap-faces)
@@ -106,7 +106,7 @@
            (((class color) (background light))
             (:foreground "green4" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Version."
           :group 'tap-faces)
@@ -119,7 +119,7 @@
            (((class color) (background light))
             (:foreground "green4" :bold t))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Version Number."
           :group 'tap-faces)
@@ -132,7 +132,7 @@
            (((class color) (background light))
             (:foreground "green4" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Version Number."
           :group 'tap-faces)
@@ -145,7 +145,7 @@
            (((class color) (background light))
             (:foreground "blue3"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Plan."
           :group 'tap-faces)
@@ -158,7 +158,7 @@
            (((class color) (background light))
             (:foreground "blue3" :weight bold :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Plan."
           :group 'tap-faces)
@@ -171,7 +171,7 @@
            (((class color) (background light))
             (:foreground "blue4" :weight bold))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Count Of Planned Tests."
           :group 'tap-faces)
@@ -184,7 +184,7 @@
            (((class color) (background light))
             (:foreground "blue4" :weight bold :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Count Of Planned Tests."
           :group 'tap-faces)
@@ -197,7 +197,7 @@
            (((class color) (background light))
             (:foreground "lightsteelblue3"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Directives."
           :group 'tap-faces)
@@ -210,7 +210,7 @@
            (((class color) (background light))
             (:foreground "lightsteelblue3" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Directives."
           :group 'tap-faces)
@@ -223,7 +223,7 @@
            (((class color) (background light))
             (:foreground "purple3"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Directive Explanations."
           :group 'tap-faces)
@@ -236,7 +236,7 @@
            (((class color) (background light))
             (:foreground "purple3" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Directive Explanations."
           :group 'tap-faces)
@@ -249,7 +249,7 @@
            (((class color) (background light))
             (:foreground "red4"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP OK Keywords."
           :group 'tap-faces)
@@ -262,7 +262,7 @@
            (((class color) (background light))
             (:foreground "red4" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP OK Keywords."
           :group 'tap-faces)
@@ -275,7 +275,7 @@
            (((class color) (background light))
             (:foreground "red4" :bold t))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP NOT OK Keywords."
           :group 'tap-faces)
@@ -288,7 +288,7 @@
            (((class color) (background light))
             (:foreground "red4" :bold t :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP NO OK Keywords."
           :group 'tap-faces)
@@ -301,7 +301,7 @@
            (((class color) (background light))
             (:foreground "blue"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold nil)))
           "Font Lock mode face used to highlight TAP Test Numbers."
           :group 'tap-faces)
@@ -314,7 +314,7 @@
            (((class color) (background light))
             (:foreground "blue" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold nil)))
           "Font Lock mode face used to highlight nested TAP Test Numbers."
           :group 'tap-faces)
@@ -327,7 +327,7 @@
            (((class color) (background light))
             (:foreground "orange4"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Test Descriptions."
           :group 'tap-faces)
@@ -340,7 +340,7 @@
            (((class color) (background light))
             (:foreground "orange4" :weight bold :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Test Descriptions."
           :group 'tap-faces)
@@ -353,7 +353,7 @@
            (((class color) (background light))
             (:foreground "lightsteelblue3"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Test Directives."
           :group 'tap-faces)
@@ -366,7 +366,7 @@
            (((class color) (background light))
             (:foreground "lightsteelblue3" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Test Directives."
           :group 'tap-faces)
@@ -379,7 +379,7 @@
            (((class color) (background light))
             (:foreground "orange3"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Unknown Test Directives."
           :group 'tap-faces)
@@ -392,7 +392,7 @@
            (((class color) (background light))
             (:foreground "orange3" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Unknown Test Directives."
           :group 'tap-faces)
@@ -405,7 +405,7 @@
            (((class color) (background light))
             (:foreground "purple3"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Test Directive Explanations."
           :group 'tap-faces)
@@ -418,7 +418,7 @@
            (((class color) (background light))
             (:foreground "purple3" :weight bold :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Test Directive Explanations."
           :group 'tap-faces)
@@ -431,7 +431,7 @@
            (((class color) (background light))
             (:foreground "green3"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight TAP Pragma Keyword."
           :group 'tap-faces)
@@ -444,7 +444,7 @@
            (((class color) (background light))
             (:foreground "green3" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold t)))
           "Font Lock mode face used to highlight nested TAP Pragma Keyword."
           :group 'tap-faces)
@@ -457,7 +457,7 @@
            (((class color) (background light))
             (:foreground "green4" :bold t))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold nil)))
           "Font Lock mode face used to highlight TAP Pragma Name."
           :group 'tap-faces)
@@ -470,7 +470,7 @@
            (((class color) (background light))
             (:foreground "green4" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold nil)))
           "Font Lock mode face used to highlight nested TAP Pragma Name."
           :group 'tap-faces)
@@ -483,7 +483,7 @@
            (((class color) (background light))
             (:foreground "steelblue3"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold nil)))
           "Font Lock mode face used to highlight TAP Comments."
           :group 'tap-faces)
@@ -496,7 +496,7 @@
            (((class color) (background light))
             (:foreground "steelblue3" :background "Gray91"))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold nil)))
           "Font Lock mode face used to highlight nested TAP Comments."
           :group 'tap-faces)
@@ -509,7 +509,7 @@
            (((class color) (background light))
             (:foreground "magenta3" :underline t))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold nil)))
           "Font Lock mode face used to highlight nested TAP YAML Diagnostics Keys."
           :group 'tap-faces)
@@ -522,7 +522,7 @@
            (((class color) (background light))
             (:foreground "magenta3" :bold t))
            (((class color) (background dark))
-            (:foreground (, tap-dark-foreground)))
+            (:foreground ,tap-dark-foreground))
            (t (:bold nil)))
           "Font Lock mode face used to highlight nested TAP YAML Diagnostics Values."
           :group 'tap-faces)
