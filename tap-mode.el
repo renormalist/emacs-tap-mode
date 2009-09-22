@@ -87,9 +87,9 @@
 
       (defface tap-version-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "green4" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "green4" :italic t :bold t))
            (((class color) (background light))
             (:foreground "green4"))
            (((class color) (background dark))
@@ -100,9 +100,9 @@
 
       (defface tap-nested-version-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "green4" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "green4" :italic t :bold t))
            (((class color) (background light))
             (:foreground "green4" :background "Gray91"))
            (((class color) (background dark))
@@ -113,9 +113,9 @@
 
       (defface tap-version-number-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "green4" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "green4" :italic t :bold t))
            (((class color) (background light))
             (:foreground "green4" :bold t))
            (((class color) (background dark))
@@ -126,9 +126,9 @@
 
       (defface tap-nested-version-number-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "green4" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "green4" :italic t :bold t))
            (((class color) (background light))
             (:foreground "green4" :background "Gray91"))
            (((class color) (background dark))
@@ -139,9 +139,9 @@
 
       (defface tap-plan-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "blue3" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "blue3" :italic t :bold t))
            (((class color) (background light))
             (:foreground "blue3"))
            (((class color) (background dark))
@@ -152,9 +152,9 @@
 
       (defface tap-nested-plan-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "blue3" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "blue3" :italic t :bold t))
            (((class color) (background light))
             (:foreground "blue3" :weight bold :background "Gray91"))
            (((class color) (background dark))
@@ -165,9 +165,9 @@
 
       (defface tap-plan-tests-planned-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "blue4" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "blue4" :italic t :bold t))
            (((class color) (background light))
             (:foreground "blue4" :weight bold))
            (((class color) (background dark))
@@ -178,9 +178,9 @@
 
       (defface tap-nested-plan-tests-planned-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "blue4" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "blue4" :italic t :bold t))
            (((class color) (background light))
             (:foreground "blue4" :weight bold :background "Gray91"))
            (((class color) (background dark))
@@ -191,9 +191,9 @@
 
       (defface tap-plan-directive-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "lightsteelblue3" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "lightsteelblue3" :italic t :bold t))
            (((class color) (background light))
             (:foreground "lightsteelblue3"))
            (((class color) (background dark))
@@ -204,9 +204,9 @@
 
       (defface tap-nested-plan-directive-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "lightsteelblue3" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "lightsteelblue3" :italic t :bold t))
            (((class color) (background light))
             (:foreground "lightsteelblue3" :background "Gray91"))
            (((class color) (background dark))
@@ -217,9 +217,9 @@
 
       (defface tap-plan-directive-explanation-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "purple3" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "purple3" :italic t :bold t))
            (((class color) (background light))
             (:foreground "purple3"))
            (((class color) (background dark))
@@ -230,9 +230,9 @@
 
       (defface tap-nested-plan-directive-explanation-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "purple3" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "purple3" :italic t :bold t))
            (((class color) (background light))
             (:foreground "purple3" :background "Gray91"))
            (((class color) (background dark))
@@ -243,9 +243,9 @@
 
       (defface tap-test-ok-face
         ` ((((class grayscale) (background light))
-            (:background "Gray90" :italic t))
+            (:background "red4" :italic t))
            (((class grayscale) (background dark))
-            (:foreground "Gray80" :italic t :bold t))
+            (:foreground "red4" :italic t :bold t))
            (((class color) (background light))
             (:foreground "red4"))
            (((class color) (background dark))
