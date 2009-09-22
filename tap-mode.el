@@ -9,7 +9,7 @@
 ;;; Copyright 2009 Steffen Schwigon
 
 ;;; Author: Steffen Schwigon <ss5@renormalist.net>
-;;; Version: 0.03
+;;; Version: 0.04
 ;;; Keywords: testing tap
 ;;; X-URL: http://search.cpan.org/~schwigon/emacs-tap-mode/
 

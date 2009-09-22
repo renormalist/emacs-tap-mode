@@ -1,3 +1,11 @@
+2009-09-22  Steffen Schwigon  <ss5@renormalist.net>
+
+	* 0.04
+
+	* fix quote bug that got triggered when using color-schemes
+
+	* modify default color sets
+
 2009-06-12  Steffen Schwigon  <ss5@renormalist.net>
 
 	* 0.03
