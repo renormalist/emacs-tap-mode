@@ -662,7 +662,7 @@
 
             ;; ----- YAML diagnostics -----
             ;; key/value pairs
-            ("^ +\\(- *\\)?\\([[:alnum:]]+\\): *\\(.+\\)" 
+            ("^ +\\(- *\\)?\\([[:alnum:]_-]+\\): *\\(.+\\)" 
              (2 'tap-yaml-diagnostics-key-face)
              (3 'tap-yaml-diagnostics-value-face)
              )

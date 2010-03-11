@@ -17,6 +17,8 @@ not ok 3 - with another explanation
      value: 1
    - name: 'Hash two'
      value: 2
+   - name-some-stuff: 'Hash three'
+     value_of_stuff: 3
    ...
 not ok 4 - explanation # todo
 pragma +strict
