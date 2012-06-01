@@ -15,6 +15,7 @@ not ok 3 - with another explanation
    ---
    - name: 'Hash one'
      value: 1
+     result_value: 1
    - name: 'Hash two'
      value: 2
    - name-some-stuff: 'Hash three'
@@ -65,6 +66,7 @@ ok 19 # TODO think twice
       ---
       - name: 'Hash one'
         value: 1
+        result_value: 1
       - name: 'Hash two'
         value: 2
       ...
