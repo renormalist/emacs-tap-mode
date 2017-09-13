@@ -1,3 +1,11 @@
+2017-09-13  Steffen Schwigon  <ss5@renormalist.net>
+
+	* 0.06
+
+	* change license to GPL-3 to be compatible with Emacs
+	- see https://lists.gnu.org/archive/html/emacs-devel/2017-07/msg01069.html
+	for context
+
 2010-07-08  Steffen Schwigon  <ss5@renormalist.net>
 
 	* 0.05
